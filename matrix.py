@@ -151,7 +151,7 @@ class Matrix:
 					# Pour k dans [0, hauteur_A[
 					for k in range(self.height):
 						# C(i, j) = A(i, k) * B(k, j)
-						result[i, j] = self[i, k] * other[k, j]
+						result[i, j] += self[i, k] * other[k, j]
 			return result
 		elif isinstance(other, numbers.Number):
 			# TODO: Multiplication scalaire.
